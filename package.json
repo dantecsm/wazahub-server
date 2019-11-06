@@ -19,7 +19,7 @@
     "express-session": "^1.15.6",
     "jade": "~1.11.0",
     "morgan": "~1.9.0",
-    "sequelize": "^4.23.1",
+    "sequelize": "^5.15.1",
     "serve-favicon": "~2.4.5",
     "sha.js": "^2.4.9",
     "sqlite": "^3.0.3"
