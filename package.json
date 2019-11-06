@@ -1,0 +1,36 @@
+{
+  "name": "wazahub-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "PORT=3006 NODE_ENV=production babel-node ./bin/www",
+    "dev": "PORT=3006 DEBUG=vue-note NODE_ENV=development babel-node ./bin/www",
+    "onchange": "onchange \"**/*.js\" \"bin/www\" -- npm run devServer",
+    "testServer": "NODE_ENV=test babel-node ./bin/www",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register tests/auth.js",
+    "zip": "rm -f *.zip && zip -P jirengu.com -r `git branch | grep '\\* ' | cut -d ' ' -f 2`.zip . -x 'node_modules/*'"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "cors": "^2.8.4",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "express-session": "^1.15.6",
+    "jade": "~1.11.0",
+    "morgan": "~1.9.0",
+    "sequelize": "^4.23.1",
+    "serve-favicon": "~2.4.5",
+    "sha.js": "^2.4.9",
+    "sqlite": "^3.0.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "onchange": "^3.2.1",
+    "request": "^2.83.0",
+    "sequelize-cli": "^3.1.0"
+  }
+}
